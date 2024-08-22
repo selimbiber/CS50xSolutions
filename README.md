@@ -1,2 +1,1 @@
-# CS50xSolutions
-https://www.kodluyoruz.org/cs50x
+# [Kodluyoruz CS50x](https://www.kodluyoruz.org/cs50x) Solutions
