@@ -12,6 +12,9 @@ html {
 
 body {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: lightgreen;
 }
 
@@ -41,7 +44,7 @@ main {
   padding: 30px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  flex: 1;
   align-items: center;
 }
 
@@ -81,7 +84,7 @@ article {
   ul {
     display: flex;
     flex-direction: column;
-    row-gap: 20px;
+    row-gap: 40px;
     margin-top: 20px;
   }
 
@@ -106,10 +109,6 @@ footer {
   display: flex;
   justify-content: center;
   column-gap: 20px;
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, 0);
   background-color: white;
   width: 100%;
   padding: 7px;
