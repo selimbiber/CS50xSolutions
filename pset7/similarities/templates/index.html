@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <div class="col">
+        <h2>File Comparison</h2>
+        <form action="/compare" enctype="multipart/form-data" method="post">
+            <div class="form-group">
+                <label for="file1">Upload File 1:</label>
+                <input type="file" id="file1" name="file1" class="form-control" accept=".txt" required>
+            </div>
+
+            <div class="form-group">
+                <label for="file2">Upload File 2:</label>
+                <input type="file" id="file2" name="file2" class="form-control" accept=".txt" required>
+            </div>
+
+            <div class="form-group">
+                <label for="algorithm">Choose Comparison Algorithm:</label>
+                <select id="algorithm" name="algorithm" class="form-control" required>
+                    <option value="" selected disabled>Select an algorithm</option>
+                    <option value="lines">Line Comparison</option>
+                    <option value="sentences">Sentence Comparison</option>
+                    <option value="substrings">Substring Comparison</option>
+                </select>
+            </div>
+
+            <div class="form-group" id="n-value-group" style="display: none;">
+                <label for="length">Enter length of substrings (n):</label>
+                <input type="number" id="length" name="length" class="form-control" min="1">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Compare Files</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('algorithm').addEventListener('change', function() {
+            const nValueGroup = document.getElementById('n-value-group');
+            const lengthInput = document.getElementById('length');
+            if (this.value === 'substrings') {
+                nValueGroup.style.display = 'block';
+                lengthInput.setAttribute('required', 'required');
+            } else {
+                nValueGroup.style.display = 'none';
+                lengthInput.removeAttribute('required'); 
+            }
+        });
+    </script>
+{% endblock %}
