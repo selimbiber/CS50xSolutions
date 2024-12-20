@@ -3,7 +3,7 @@
 C$50 Finance is a personal finance management web application inspired by [CS50 Finance](https://finance.cs50.net/). It allows users to track their stock portfolios, make buy/sell transactions, add cash to their account, and view their transaction history. It is built using **Flask** as the backend framework, **SQLite** for database management, and **Bootstrap** for responsive front-end design.
 
 This application is currently live and accessible at:  
-[https://cs50-finance.onrender.com)](https://cs50-finance.onrender.com)
+[https://c-50-finance-project.onrender.com/)](https://c-50-finance-project.onrender.com/)
 
 ---
 
